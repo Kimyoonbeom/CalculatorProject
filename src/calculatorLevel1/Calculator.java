@@ -1,4 +1,4 @@
-package excalculator;
+package calculatorLevel1;
 //입력 받는거 만들기
 
 import java.util.Scanner;

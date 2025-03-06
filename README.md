@@ -30,8 +30,8 @@
    - ArithmeticCalculator 클래스에 위 요구사항을 만족하는 조회 메서드를 구현
    - 해당 메서드를 구현할 때 Lambda & Stream을 활용
    - 키워드: **람다, 스트림**
-<P></P>
-## P.S.
-calculatorLevel1의 경우 Calculator.java만을 보면 되며,
 
+## P.S.
+
+calculatorLevel1의 경우 Calculator.java만을 보면 되며,
 calculatorLevel3에서 OperatorTypeEx의 경우 util의 BiFuntion을 시도 해보려 했던것이니 실 사용은 OperatorType이다.

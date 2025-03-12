@@ -28,8 +28,11 @@ public class Calculator {
             default:
                 throw new IllegalArgumentException("잘못된 연산자입니다.");
         }
-        results.add(result);
         return result;
+    }
+
+    public void saveResult(double result) {
+        results.add(result);
     }
 
     public List<Double> getResults() {

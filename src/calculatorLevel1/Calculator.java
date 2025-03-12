@@ -21,7 +21,7 @@ public class Calculator {
 
         while (true) {
             System.out.println("첫 번째 숫자를 입력하시오(종료를 원하면 'exit'를 입력하세요) : ");
-            String input = sc.nextLine().trim();
+            String input = sc.nextLine().trim();//.trim()은 문자열 앞뒤 공백을 제거함.
 
             if (input.equalsIgnoreCase("exit")) {
                 System.out.println("계산기 종료!");
@@ -36,7 +36,7 @@ public class Calculator {
             try {
                 int num1 = Integer.parseInt(input);
                 System.out.println("두 번째 숫자를 입력하세요:");
-                int num2 = Integer.parseInt(sc.nextLine().trim());
+                int num2 = Integer.parseInt(sc.nextLine().trim()); // Integar.parseInt()는 문자열을 정수로 변환하는 메소드
 
                 System.out.println("사칙연산 기호를 입력하세요('+', '-', '*', '/'):");
                 char operator = sc.nextLine().charAt(0);

@@ -1,18 +1,18 @@
 package calculatorLevel2;
 import java.util.Scanner; //입력 import
+
+
 public class App {
 // calculator 객체를 저장하기 위한 필드
-    private Calculator calculator;
-// 이거는 메인의 App app = new App(calculator); 로 표시하려고 할때
+private Calculator calculator;
+    private Scanner sc;
+
     public App(Calculator calculator) {
-        // 전달 받은 calculator 객체를 필드에 저장.
         this.calculator = calculator;
+        this.sc = new Scanner(System.in);
     }
-    public static void main(String[] args) {
-        /* Calculator 인스턴스 생성 */
-        Calculator calculator = new Calculator();
-        Scanner sc = new Scanner(System.in);
-        /* 반복문 시작 */
+
+    public void run() {
         while (true) {
             System.out.print("첫 번째 숫자를 입력하세요 (종료하려면 'exit' 입력): ");
             String input = sc.nextLine();
@@ -31,6 +31,7 @@ public class App {
 
             try {
                 double result = calculator.calculate(num1, num2, operator);
+                calculator.saveResult(result); // 결과 저장 메서드 호출
                 System.out.println("연산 결과 = " + result);
 
                 System.out.println("현재 저장된 모든 결과: " + calculator.getResults());
@@ -47,11 +48,7 @@ public class App {
                 break;
             }
         }
-        /* 반복문 종료 */
         sc.close();
     }
-
-    public void run() {
-        // Main의 프로그램 실행 'run'을 위한 {}
-    }
 }
+
